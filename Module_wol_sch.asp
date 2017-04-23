@@ -158,7 +158,7 @@ hideClients_Block();
 			</div>
 		</label>
 	</div>
-	<div id="koolproxy_install_show" style="padding-top:5px;margin-left:80px;margin-top:-30px;float: left;"></div>	
+	<div id="wol_install_show" style="padding-top:5px;margin-left:80px;margin-top:-30px;float: left;"></div>	
 </td>
 </tr>
 </table>
@@ -178,9 +178,9 @@ hideClients_Block();
 	</tr>
 	<tr>
 		<td>
-			<input type="text" class="input_20_table" maxlength="17" name="wollist_macAddr" onClick="hideClients_Block();" autocorrect="off" autocapitalize="off" style="margin-left:5px;width:130px;" onKeyPress="return validator.isHWAddr(this,event)" placeholder="<% nvram_get("lan_hwaddr"); %>">
-<img id="pull_arrow" height="14px;" src="/images/arrow-down.gif" style="position:absolute;*margin-left:-3px;*margin-top:1px;" onclick="pullLANIPList(this);" title="Select Mac">
-<div id="ClientList_Block_PC" class="clientlist_dropdown"></div>
+			<input type="text" maxlength="15" class="input_15_table" id="wol_acl_name" name="wol_acl_name" align="left" onkeypress="return validator.isIPAddr(this, event)" style="float:left;" autocomplete="off" onClick="hideClients_Block();" autocorrect="off" autocapitalize="off">
+			<img id="pull_arrow" height="14px;" src="images/arrow-down.gif" align="right" onclick="pullLANIPList(this);" title="<#select_name#>">
+			<div id="ClientList_Block" class="clientlist_dropdown" style="margin-left:2px;margin-top:25px;"></div>
 		</td>
 		<td>
 			<input type="text" id="wol_sch_mac" name="wol_sch_mac" class="input_ss_table" maxlength="50" style="width:140px;" placeholder="" />
